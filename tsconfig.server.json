@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./dist/server",
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/app/**/*",
+  ],
+  "exclude": [
+    "node_modules/",
+    "build",
+    "dist",
+    "src/react",
+  ]
+}
