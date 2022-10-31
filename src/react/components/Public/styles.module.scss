@@ -1,0 +1,52 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .icon {
+        display: block;
+        animation-timing-function: linear;
+        animation-name: icon-keyframes;
+        animation-fill-mode: forwards;
+        animation-duration: 15000ms;
+        animation-iteration-count: infinite;
+    }
+
+    .title {
+        margin: 30px auto 0;
+        font-size: 102px;
+        font-weight: 700;
+        color: #506c84;
+    }
+
+    .button {
+        border: none;
+        font-size: 52px;
+        background: darkkhaki;
+        border-radius: 32px;
+        color: aliceblue;
+        padding: 20px 64px;
+        margin-top: 12px;
+        cursor: pointer;
+        transform-origin: center center;
+        transition: transform .2s;
+    }
+
+    .button:active {
+        scale: 0.95;
+    }
+}
+
+@keyframes icon-keyframes {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

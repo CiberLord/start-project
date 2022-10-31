@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 import icon from './assets/react-icon.svg';
 
-export const App = React.memo(() => {
+export const Public = React.memo(() => {
     const onclick = () => {
         alert('Hello! This is test project');
     };
