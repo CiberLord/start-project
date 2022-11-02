@@ -3,13 +3,13 @@ import { PageInitializer } from './libs/PageInitializer';
 import { Bundles } from '../types/common';
 import * as mw from './middlewares';
 import { getConfig } from './configs/default';
-// import { collectDefaultMetrics } from './libs/prometheus';
+import { collectDefaultMetrics } from './libs/prometheus';
 
 const app = express();
 
 const configs = getConfig();
 
-// collectDefaultMetrics();
+collectDefaultMetrics();
 
 const pageInitializer = new PageInitializer({
     rootBundlePath: configs.clientDir,
@@ -20,6 +20,7 @@ const pageInitializer = new PageInitializer({
 app.use(mw.startTime);
 app.use(express.static(configs.clientDir));
 app.use(mw.ping);
+app.use(mw.favicon);
 app.use(mw.metrics());
 app.use(mw.pages(pageInitializer));
 app.use(mw.render);

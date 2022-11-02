@@ -4,3 +4,4 @@ export { render } from './render';
 export { ping } from './ping';
 export { metrics } from './metrics';
 export { startTime } from './startTime';
+export { favicon } from './favicon';

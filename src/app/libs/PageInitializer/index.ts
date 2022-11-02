@@ -89,6 +89,7 @@ export class PageInitializer {
             ...data,
             scripts: this.bundles[bundleName].scripts,
             styles: this.bundles[bundleName].styles,
+            favicon: '/favicon.svg',
         };
 
         return ejs.render(this.template, commonData);
